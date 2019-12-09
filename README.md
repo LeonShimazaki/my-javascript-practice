@@ -1,2 +1,2 @@
 # my-javascript-practice
-Practice learning the javascript.
+Practice learning javascript.
