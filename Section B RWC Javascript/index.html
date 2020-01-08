@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+	<link rel="stylesheet" href="css/stylesheet.css">
+    <link src="js/javascript.js">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <!-- include source files here... -->
+    <script src="src/json.js"></script>
+    <script src="src/rwc.js"></script>
+    <script src="src/team.js"></script>
+    <script src="src/venue.js"></script>
+    <script src="src/match.js"></script>
+    <script src="src/pool.js"></script>
+    <script src="src/controller.js"></script>
+
+	<!-- <script src="src/pool_results.js"></script> -->
+    <div id="divDisplay"></div>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		#divDisplay{
+			background-color: white;
+			font-size: 1em;
+			border: 1px solid black;
+			padding: 2em;
+			color: crimson;
+		}
+	</style>
+</head>
+
+<body class="container" style="background-image: url('img/Rugby-World-Cup.jpg')">
+
+
+    <script>
+        var theMatch // GLOBAL FOR DEBUGGING
+        var go = function() {
+            theMatch = Controller.setup()
+            console.log(theMatch)
+            let theDisplay = document.getElementById('divDisplay')
+            document.body.style.fontFamily = 'Courier New'
+                theDisplay.innerHTML = theMatch.toString()
+                // uncommentthe above line 
+                // when you have written a toString method in the Match class
+		//View.clr()
+		//View.out(theMatch)
+        }
+        window.onload = go
+    </script>
+<footer class="footer-distributed">
+	<div class="footer-left">
+		<h3>Rugby World Cup By Leon Shimazaki</h3>
+		<p class="footer-links">
+			<a href="#">Home</a>
+			·
+			<a href="#">Pricing</a>
+			·
+			<a href="#">About</a>
+			·
+			<a href="#">Contact</a>
+		</p>
+		<p class="footer-company-name">Shimazaki Designs © 2015</p>
+	</div>
+	<div class="footer-center">
+		<div>
+			<i class="fa fa-map-marker"></i>
+			<div class="address">
+				<p>Ara Something Madras Street,
+				Christchurch,
+				New Zealand 8022</p>
+			</div>
+		</div>
+		<div>
+			<i class="fa fa-phone"></i>
+			<p>+64 022 123456</p>
+		</div>
+		<div>
+			<i class="fa fa-envelope"></i>
+			<p>support@company.com</p>
+		</div>
+	</div>
+	<div class="footer-right">
+		<h3>Follow Us on</h3>
+		<div class="footer-icons">
+			<a href="#"><i class="fa fa-facebook"></i></a>
+			<a href="#"><i class="fa fa-twitter"></i></a>
+			<a href="#"><i class="fa fa-linkedin"></i></a>
+			<a href="#"><i class="fa fa-github"></i></a>
+		</div>
+	</div>
+</footer>
+</body>
+
+</html>
